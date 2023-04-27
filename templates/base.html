@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EVENT.COM</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/post.css' %}">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+<body>
+
+    <header class="head">
+        <h1><a href="{% url 'home' %}">EVENT.COM</a></h1>
+    </header>
+
+    <div class="border">
+        {% block content %}
+        {% endblock content %}
+    </div>
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+    {% for post in object_list %}
+        <div class="post-entry">
+            <h2><a href="{% url 'post' post.pk %}">{{ post.title }}</a></h2>
+            <p>{{ post.body | slice:":100" }}</p>
+        </div>
+    {% endfor %}
+{% endblock content %}
+
+
+<!-- python manage.py runserver -->
